@@ -78,6 +78,23 @@ It tracks two tools side by side:
 
 ---
 
+## <img src="docs/icons/activity.svg" height="20" align="top" /> How it compares
+
+Different tools, different shapes — QuotaLens is the always-on menu-bar option:
+
+| | **QuotaLens** | A usage CLI (e.g. `ccusage`) | Official usage page |
+|---|:---:|:---:|:---:|
+| Form factor | menu-bar app, always visible | terminal command, run on demand | web dashboard |
+| Live 5h / 7d rate-limit % | ✓ ring in the menu bar | — | ✓ (in the browser) |
+| Claude + Codex in one view | ✓ | varies | separate per provider |
+| Multiple accounts at once | ✓ up to 4 | varies | one login |
+| Token / cost history | ✓ | ✓ | ✓ |
+| No browser or command to run | ✓ | — | — |
+
+A terminal tool like `ccusage` is great if you live in the shell or want usage in CI; QuotaLens trades that for a glanceable gauge that stays in the corner of your screen. Use whichever fits your workflow — or both.
+
+---
+
 ## <img src="docs/icons/download.svg" height="20" align="top" /> Install
 
 > **Requirements:** macOS 13+, Xcode 16+ (Swift 6 toolchain) — only needed if building from source.
