@@ -20,6 +20,22 @@ QuotaLens fixes that — a macOS menu-bar gauge that shows your **Claude** and *
 
 </div>
 
+<div align="center">
+
+### Install in one line · macOS 13+
+
+</div>
+
+```sh
+brew install --cask mangiapanejohn-dev/tap/quotalens
+```
+
+<div align="center">
+
+Prefer a download? Grab <a href="https://github.com/mangiapanejohn-dev/QuotaLens/releases/latest"><code>QuotaLens.dmg</code></a> from the latest release.
+
+</div>
+
 ---
 
 ## Why QuotaLens?
@@ -59,6 +75,23 @@ It tracks two tools side by side:
 - **Token-expiry alerts** — when a token expires the card flags it and sends a system notification to re-paste.
 - **Statistics window** — tokens / cost / cache with a smooth multi-series trend chart. Pick Today / 3d / 7d / 30d / All or a custom range; short ranges render hourly. Hover for per-point detail.
 - **Launch at login** — optional, via `SMAppService`.
+
+---
+
+## <img src="docs/icons/activity.svg" height="20" align="top" /> How it compares
+
+Different tools, different shapes — QuotaLens is the always-on menu-bar option:
+
+| | **QuotaLens** | A usage CLI (e.g. `ccusage`) | Official usage page |
+|---|:---:|:---:|:---:|
+| Form factor | menu-bar app, always visible | terminal command, run on demand | web dashboard |
+| Live 5h / 7d rate-limit % | ✓ ring in the menu bar | — | ✓ (in the browser) |
+| Claude + Codex in one view | ✓ | varies | separate per provider |
+| Multiple accounts at once | ✓ up to 4 | varies | one login |
+| Token / cost history | ✓ | ✓ | ✓ |
+| No browser or command to run | ✓ | — | — |
+
+A terminal tool like `ccusage` is great if you live in the shell or want usage in CI; QuotaLens trades that for a glanceable gauge that stays in the corner of your screen. Use whichever fits your workflow — or both.
 
 ---
 
@@ -143,6 +176,28 @@ The official Claude / Codex marks shown on source cards are pulled from your loc
 - [ ] iCloud sync across Macs
 
 Have an idea? [Open an issue](https://github.com/mangiapanejohn-dev/QuotaLens/issues) — PRs welcome.
+
+---
+
+## FAQ
+
+**Does QuotaLens send my tokens or usage anywhere?**
+No. Everything runs locally. The only network call is a minimal, throttled probe to read Claude's rate-limit headers (one `max_tokens: 1` request per account, at most once every 5 minutes). Tokens are stored in `UserDefaults` on your Mac and are never sent anywhere else.
+
+**Which tools and accounts does it track?**
+Claude and Codex, side by side. For Claude, add any account you can run `claude setup-token` for — each becomes its own card, up to 4 sources total. Codex needs no setup; it reads `~/.codex/sessions` locally.
+
+**macOS says QuotaLens is from an unidentified developer — how do I open it?**
+Right-click (or Control-click) the app in `/Applications` and choose **Open**, then confirm once. macOS remembers the choice for later launches.
+
+**Can I use it with only Claude, or only Codex?**
+Yes. Sources are independent — the panel and statistics reflect only the sources you've configured. No Claude account means no Claude card, and vice-versa.
+
+**Where does the quota data come from — is it accurate?**
+From the authoritative sources the tools use themselves: Claude's real `anthropic-ratelimit-unified-*` response headers and Codex's official `rate_limits` from local rollout files.
+
+**How is this different from a CLI or the official usage page?**
+See [How it compares](#-how-it-compares) above — in short, QuotaLens is an always-on menu-bar gauge rather than a command you run or a web dashboard you open.
 
 ---
 
