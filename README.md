@@ -179,6 +179,28 @@ Have an idea? [Open an issue](https://github.com/mangiapanejohn-dev/QuotaLens/is
 
 ---
 
+## FAQ
+
+**Does QuotaLens send my tokens or usage anywhere?**
+No. Everything runs locally. The only network call is a minimal, throttled probe to read Claude's rate-limit headers (one `max_tokens: 1` request per account, at most once every 5 minutes). Tokens are stored in `UserDefaults` on your Mac and are never sent anywhere else.
+
+**Which tools and accounts does it track?**
+Claude and Codex, side by side. For Claude, add any account you can run `claude setup-token` for — each becomes its own card, up to 4 sources total. Codex needs no setup; it reads `~/.codex/sessions` locally.
+
+**macOS says QuotaLens is from an unidentified developer — how do I open it?**
+Right-click (or Control-click) the app in `/Applications` and choose **Open**, then confirm once. macOS remembers the choice for later launches.
+
+**Can I use it with only Claude, or only Codex?**
+Yes. Sources are independent — the panel and statistics reflect only the sources you've configured. No Claude account means no Claude card, and vice-versa.
+
+**Where does the quota data come from — is it accurate?**
+From the authoritative sources the tools use themselves: Claude's real `anthropic-ratelimit-unified-*` response headers and Codex's official `rate_limits` from local rollout files.
+
+**How is this different from a CLI or the official usage page?**
+See [How it compares](#-how-it-compares) above — in short, QuotaLens is an always-on menu-bar gauge rather than a command you run or a web dashboard you open.
+
+---
+
 ## Contributing
 
 1. Fork the repo and create a branch: `git checkout -b feat/your-idea`
