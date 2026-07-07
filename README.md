@@ -20,6 +20,22 @@ QuotaLens fixes that — a macOS menu-bar gauge that shows your **Claude** and *
 
 </div>
 
+<div align="center">
+
+### Install in one line · macOS 13+
+
+</div>
+
+```sh
+brew install --cask mangiapanejohn-dev/tap/quotalens
+```
+
+<div align="center">
+
+Prefer a download? Grab <a href="https://github.com/mangiapanejohn-dev/QuotaLens/releases/latest"><code>QuotaLens.dmg</code></a> from the latest release.
+
+</div>
+
 ---
 
 ## Why QuotaLens?
