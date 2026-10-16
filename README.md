@@ -32,7 +32,7 @@ brew install --cask mangiapanejohn-dev/tap/quotalens
 
 <div align="center">
 
-Prefer a download? Grab <a href="https://github.com/mangiapanejohn-dev/QuotaLens/releases/latest"><code>QuotaLens.dmg</code></a> from the latest release.
+Prefer a download? Grab <a href="https://github.com/maga2010org/QuotaLens/releases/latest"><code>QuotaLens.dmg</code></a> from the latest release.
 
 </div>
 
@@ -108,12 +108,12 @@ brew install --cask quotalens
 
 ### Option 2 — DMG
 
-Download `QuotaLens.dmg` from the [latest release](https://github.com/mangiapanejohn-dev/QuotaLens/releases/latest), open it, and drag to `/Applications`.
+Download `QuotaLens.dmg` from the [latest release](https://github.com/maga2010org/QuotaLens/releases/latest), open it, and drag to `/Applications`.
 
 ### Option 3 — Build from source
 
 ```sh
-git clone https://github.com/mangiapanejohn-dev/QuotaLens.git
+git clone https://github.com/maga2010org/QuotaLens.git
 cd QuotaLens
 make install      # builds and copies QuotaLens.app to /Applications
 ```
@@ -175,7 +175,7 @@ The official Claude / Codex marks shown on source cards are pulled from your loc
 - [ ] Weekly usage summary notifications
 - [ ] iCloud sync across Macs
 
-Have an idea? [Open an issue](https://github.com/mangiapanejohn-dev/QuotaLens/issues) — PRs welcome.
+Have an idea? [Open an issue](https://github.com/maga2010org/QuotaLens/issues) — PRs welcome.
 
 ---
 
@@ -213,11 +213,11 @@ Please keep PRs focused — one feature or fix per PR. See [CONTRIBUTING.md](CON
 
 ## Star History
 
-<a href="https://www.star-history.com/?repos=mangiapanejohn-dev%2FQuotaLens&type=timeline&logscale=&legend=top-left">
+<a href="https://www.star-history.com/?repos=maga2010org%2FQuotaLens&type=timeline&logscale=&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=mangiapanejohn-dev/QuotaLens&type=timeline&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=mangiapanejohn-dev/QuotaLens&type=timeline&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=mangiapanejohn-dev/QuotaLens&type=timeline&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=maga2010org/QuotaLens&type=timeline&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=maga2010org/QuotaLens&type=timeline&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=maga2010org/QuotaLens&type=timeline&legend=top-left" />
  </picture>
 </a>
 
@@ -277,12 +277,12 @@ brew install --cask quotalens
 
 ### 方式二 — DMG
 
-从 [最新 Release](https://github.com/mangiapanejohn-dev/QuotaLens/releases/latest) 下载 `QuotaLens.dmg`,打开后拖入 `/Applications`。
+从 [最新 Release](https://github.com/maga2010org/QuotaLens/releases/latest) 下载 `QuotaLens.dmg`,打开后拖入 `/Applications`。
 
 ### 方式三 — 自行构建
 
 ```sh
-git clone https://github.com/mangiapanejohn-dev/QuotaLens.git
+git clone https://github.com/maga2010org/QuotaLens.git
 cd QuotaLens
 make install      # 构建并把 QuotaLens.app 拷到 /Applications
 ```
@@ -313,7 +313,7 @@ Codex 无需配置 —— 自动读 `~/.codex/sessions`。token 过期时卡片�
 - [ ] 每周用量摘要通知
 - [ ] iCloud 多 Mac 同步
 
-有想法？[提个 Issue](https://github.com/mangiapanejohn-dev/QuotaLens/issues) —— 欢迎 PR。
+有想法？[提个 Issue](https://github.com/maga2010org/QuotaLens/issues) —— 欢迎 PR。
 
 ## License
 
